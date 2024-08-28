@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="description" content="{{ .Site.Params.description }}">
     <meta name="author" content="">
-    <meta property="og:image" content="https://itrs.tw/images/banner3.jpg"/>
+    <meta property="og:image" content="https://itrs.tw/images/{{ .Site.Params.banner_img }}"/>
     <meta property="og:url" content="https://itrs.tw"/>
     <meta property="og:type" content="website"/>
     <meta property="og:description" content="{{ .Site.Params.description }}"/>
@@ -35,14 +35,29 @@
 		<link rel="stylesheet" href="{{ . | absURL }}">
 	{{- end }}
 
-    {{ with .Site.Params.gtag_id}}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+    {{ with .Site.Params.gtag }}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .id }}"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', {{ . }});
+    gtag('config', {{ .id }});
+
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.open(url, '_blank');
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': '{{ .id }}/{{ .label }}',
+        'value': 1.0,
+        'currency': 'TWD',
+        'event_callback': callback
+      });
+      return false;
+    }
     </script>
     {{ end }}
 </head>

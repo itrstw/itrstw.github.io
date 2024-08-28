@@ -2,8 +2,8 @@
 <footer class="wrapper style1 align-center">
     <div class="inner">
         <ul class="icons">
-            {{ with .Site.Params.social.instagram}}<li><a target="_blank" href="{{.}}" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>{{end}}
-            {{ with .Site.Params.social.discord}}<li><a target="_blank" href="{{.}}" class="icon brands style2 fa-discord"><span class="label">Discord</span></a></li>{{end}}
+            {{ with .Site.Params.social.instagram}}<li><a onclick="return gtag_report_conversion('{{.}}');" target="_blank" href="{{.}}" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>{{end}}
+            {{ with .Site.Params.social.discord}}<li><a onclick="return gtag_report_conversion('{{.}}');" target="_blank" href="{{.}}" class="icon brands style2 fa-discord"><span class="label">Discord</span></a></li>{{end}}
             {{ with .Site.Params.social.facebook}}<li><a target="_blank" href="{{.}}" class="icon brands style2 fa-facebook"><span class="label">Facebook</span></a></li>{{end}}
             {{ with .Site.Params.social.github}}<li><a target="_blank" href="{{.}}" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>{{end}}
             {{ with .Site.Params.social.linktree }}<li><a target="_blank" href="{{.}}" class="icon style2 fa-tree"><span class="label">Linktree</span></a></li>{{end}}

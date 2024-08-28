@@ -5,13 +5,13 @@
         {{ with .subtitle }}<p class="major">{{ . | safeHTML }}</p>{{ end }}
         {{ with .content }}<p>{{ . | safeHTML }}</p>{{ end }}
         {{ with .button }}<ul class="actions stacked">
-            <li><a href="{{ .link1 }}" class="button primary large wide smooth-scroll-middle">{{ .label1 }}</a>&nbsp;&nbsp;
-                <a target="_blank" href="{{ .link2 }}" class="button primary large wide smooth-scroll-middle">
-                    <i href="https://www.instagram.com/hsnu_itrs" class="icon brands fa-instagram fa-inverse"><span class="label">Instagram</span> {{.label2}}</i>
+            <li><a href="{{ .link_next }}" class="button primary large wide smooth-scroll-middle">{{ .label_next }}</a>&nbsp;&nbsp;
+                <a onclick="return gtag_report_conversion('{{ .link_ig }}');" target="_blank" href="{{ .link_ig }}" class="button primary large wide smooth-scroll-middle">
+                    <b class="icon brands fa-instagram fa-inverse"><span class="label">{{ .label_ig }}</span> {{ .label_ig }}</b>
                 </a></li>
         </ul>{{ end }}
     </div>
     {{ with .image }}<div class="image">
-        <img src="{{.}}" alt="Hugo Story" />
+        <img src="{{.}}" alt="3D Printing of Minions" />
     </div>{{end}}
 </section>

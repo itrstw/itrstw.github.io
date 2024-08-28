@@ -2,8 +2,8 @@
 style: "style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right"
 title : "ITRS - 附中工研"
 subtitle: |
-    <a target="_blank" href="https://www.instagram.com/hsnu_itrs" class="icon brands style2 fa-instagram"><span class="label">instagram</span></a>
-    <a target="_blank" href="https://discord.com/invite/fwSwZtFgzH" class="icon brands style2 fa-discord"><span class="label">Discord</span></a>
+    <a onclick="return gtag_report_conversion('https:\/\/www.instagram.com\/hsnu_itrs');" target="_blank" href="https://www.instagram.com/hsnu_itrs" class="icon brands style2 fa-instagram"><span class="label">instagram</span></a>
+    <a onclick="return gtag_report_conversion('https:\/\/discord.com/invite/fwSwZtFgzH');" target="_blank" href="https://discord.com/invite/fwSwZtFgzH" class="icon brands style2 fa-discord"><span class="label">Discord</span></a>
     <a target="_blank" href="https://www.facebook.com/HSNU.ITRS.infinite" class="icon brands style2 fa-facebook"><span class="label">Facebook</span></a>
     <a target="_blank" href="https://github.com/itrstw/" class="icon brands style2 fa-github"><span class="label">Github</span></a>
     <a target="_blank" href="https://linktr.ee/hsnu_itrs" class="icon style2 fa-tree"><span class="label">Linktree</span></a>
@@ -13,9 +13,9 @@ content : |
   我們崇尚實驗的精神，喜愛親手創作的樂趣，並致力於將創意變為現實。在工研社，你將有機會和志同道合的同學一起學習新知識、開發新技術，並將想法付諸實踐。
 
 button:
-  label1 : "了解更多"
-  link1 : "#first"
-  label2 : "活動IG"
-  link2 : "https://www.instagram.com/hsnu_itrs"
+  label_next : "了解更多"
+  link_next : "#first"
+  label_ig : "活動IG"
+  link_ig : "https://www.instagram.com/hsnu_itrs"
 image : "images/banner0-1.jpg"
 

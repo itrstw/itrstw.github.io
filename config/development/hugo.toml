@@ -35,7 +35,10 @@ disableKinds = ["taxonomy", "section"]
   description = "工研社成立於1977年，是台灣最早的創客空間之一。在這裡，我們探索工業技術的無限可能。"
   logo = "images/banner.jpg"
   favicon = true
-  gtag_id = "AW-16678989424"
+
+[Params.gtag]
+  id = "AW-16678989424"
+  label = "HnBfCPf7nswZEPDclJE-"
 
 [Params.social]
   instagram = "https://www.instagram.com/hsnu_itrs/"
