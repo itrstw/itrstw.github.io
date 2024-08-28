@@ -2,7 +2,7 @@
 ## Basic Configuration
 ## -----------------------------------------------
 
-title = "Hugo Story"
+title = "ITRS - 附中工研"
 copyright = "{year}"
 
 ## -----------------------------------------------
@@ -35,14 +35,14 @@ disableKinds = ["taxonomy", "section"]
   description = "A (modular, highly tweakable) responsive one-page theme for Hugo"
   logo = "images/banner.jpg"
   favicon = true
+  gtag_id = "AW-16678989424"
 
 [Params.social]
-  github = "https://github.com/caressofsteel/"
-  twitter = "https://twitter.com/caressofsteel_"
-  email = "caressofsteel@protonmail.com"
-  instagram = "https://instagram.com"
-  linkedin = "https://linkedin.com"
-  telegram = "https://telegram.org"
+  instagram = "https://www.instagram.com/hsnu_itrs/"
+  discord = "https://discord.com/invite/fwSwZtFgzH"
+  facebook = "https://www.facebook.com/HSNU.ITRS.infinite"
+  github = "https://github.com/itrstw/"
+  linktree = "https://linktr.ee/hsnu_itrs"
 
 [Params.asset]
   fontawesome_css = ["css/fontawesome-all.min.css"]
