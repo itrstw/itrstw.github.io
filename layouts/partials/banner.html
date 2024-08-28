@@ -5,7 +5,10 @@
         {{ with .subtitle }}<p class="major">{{ . | safeHTML }}</p>{{ end }}
         {{ with .content }}<p>{{ . | safeHTML }}</p>{{ end }}
         {{ with .button }}<ul class="actions stacked">
-            <li><a href="{{ .link }}" class="button primary large wide smooth-scroll-middle">{{ .label }}</a></li>
+            <li><a href="{{ .link1 }}" class="button primary large wide smooth-scroll-middle">{{ .label1 }}</a>&nbsp;&nbsp;
+                <a target="_blank" href="{{ .link2 }}" class="button primary large wide smooth-scroll-middle">
+                    <i href="https://www.instagram.com/hsnu_itrs" class="icon brands fa-instagram fa-inverse"><span class="label">Instagram</span> {{.label2}}</i>
+                </a></li>
         </ul>{{ end }}
     </div>
     {{ with .image }}<div class="image">

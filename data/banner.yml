@@ -13,7 +13,9 @@ content : |
   我們崇尚實驗的精神，喜愛親手創作的樂趣，並致力於將創意變為現實。在工研社，你將有機會和志同道合的同學一起學習新知識、開發新技術，並將想法付諸實踐。
 
 button:
-  label : "Get Started"
-  link : "#first"
-image : "images/banner1.jpg"
+  label1 : "了解更多"
+  link1 : "#first"
+  label2 : "活動IG"
+  link2 : "https://www.instagram.com/hsnu_itrs"
+image : "images/banner0-1.jpg"
 
