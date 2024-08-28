@@ -2,9 +2,14 @@
 	<title>{{ .Site.Title }}</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="description" content="{{ .Site.Params.description }}">
+    <meta name="author" content="">
     <meta property="og:image" content="https://itrs.tw/images/banner3.jpg"/>
+    <meta property="og:url" content="https://itrs.tw"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="{{ .Site.Params.description }}"/>
+    <meta property="og:title" content="{{ .Site.Title }}"/>
+
 	{{ if .Site.Params.favicon }}
 	{{ partial "favicon" }}
 	{{ end }}
