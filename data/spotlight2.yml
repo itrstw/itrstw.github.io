@@ -1,0 +1,11 @@
+####################### Spotlight #########################
+style: "style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
+title : "3D列印建模 與 化工"
+content: |
+  <h3>3D列印與建模組 💫</h3>
+  歡迎加入我們充滿歡樂和自由的3D組！在這裡，你可以一起玩3D列印，並學習如何建立自己的3D模型和應用。讓我們一起用科技創造無限可能吧！<br/><br/>
+
+  <h3>化工組 🧪 </h3>
+  化工組將帶你進行真實的化學實驗！我們有自己的藥品櫃，你將能動手操作各種有趣的化工實驗，探索化學的奇妙世界！🐿️
+
+image: "images/banner4.jpg"

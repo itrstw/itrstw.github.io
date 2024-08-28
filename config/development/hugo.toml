@@ -1,0 +1,49 @@
+## -----------------------------------------------
+## Basic Configuration
+## -----------------------------------------------
+
+title = "ITRS - 附中工研"
+copyright = "{year}"
+
+## -----------------------------------------------
+## Publish
+## -----------------------------------------------
+
+relativeURLs = "true"
+#canonifyURLs = "true"
+
+# Local
+baseURL = "/"
+publishDir = "public"
+
+# Remote
+#baseURL = "https://caressofsteel.github.io/demos/hugo/hugo-story/"
+#publishDir = "//centos/sites/hugodev/hugostory/"
+
+## -----------------------------------------------
+## Hugo Built-in Features
+## -----------------------------------------------
+
+disableKinds = ["taxonomy", "section"]
+# googleAnalytics = "G-XXXXXXXXXX"
+
+## -----------------------------------------------
+## Site Parameters
+## -----------------------------------------------
+
+[Params]
+  description = "A (modular, highly tweakable) responsive one-page theme for Hugo"
+  logo = "images/banner.jpg"
+  favicon = true
+  gtag_id = "AW-16678989424"
+
+[Params.social]
+  instagram = "https://www.instagram.com/hsnu_itrs/"
+  discord = "https://discord.com/invite/fwSwZtFgzH"
+  facebook = "https://www.facebook.com/HSNU.ITRS.infinite"
+  github = "https://github.com/itrstw/"
+  linktree = "https://linktr.ee/hsnu_itrs"
+
+[Params.asset]
+  fontawesome_css = ["css/fontawesome-all.min.css"]
+  fontawesome_js = ["js/fontawesome-all.min.js"]

@@ -1,0 +1,9 @@
+####################### Banner #########################
+style: "style1 orient-right content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right"
+title : "如何聯絡 📞"
+content : |
+  加入工研社後，我們主要通過 <a target="_blank" href="https://discord.com/invite/fwSwZtFgzH" class="icon brands fa-discord"><span class="label">Instagram</span> Discord</a> 進行活動。
+  想了解更多活動成果，請查看我們的 <a target="_blank" href="https://www.instagram.com/hsnu_itrs" class="icon brands fa-instagram"><span class="label">Instagram</span> Instagram</a> 或
+  <a target="_blank" href="https://linktr.ee/hsnu_itrs" class="icon fa-link"><span class="label">Linktree</span> Linktree</a>！
+image : "images/banner1.jpg"
+
