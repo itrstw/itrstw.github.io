@@ -9,32 +9,6 @@
     <meta property="og:type" content="website"/>
     <meta property="og:description" content="{{ .Site.Params.description }}"/>
     <meta property="og:title" content="{{ .Site.Title }}"/>
-
-	{{ if .Site.Params.favicon }}
-	{{ partial "favicon" }}
-	{{ end }}
-
-	<!-- CSS -->
-	{{ if hugo.IsServer }}
-	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" false) }}
-	<link rel="stylesheet" href="{{ ($style).RelPermalink }}">
-	{{ else }}
-	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "enableSourceMap" false) }}
-	<link rel="stylesheet" href="{{ ($style | minify).RelPermalink }}">
-	{{ end }}
-	{{ if hugo.IsServer }}
-	{{ $noscript := resources.Get "sass/noscript.scss" | resources.ExecuteAsTemplate "noscript.scss" . | toCSS (dict "targetPath" "css/noscript.css" "enableSourceMap" false) }}
-	<noscript><link rel="stylesheet" href="{{ ($noscript).RelPermalink }}" /></noscript>
-	{{ else }}
-	{{ $noscript := resources.Get "sass/noscript.scss" | resources.ExecuteAsTemplate "noscript.scss" . | toCSS (dict "targetPath" "css/noscript.css" "enableSourceMap" false) }}
-	<noscript><link rel="stylesheet" href="{{ ($noscript | minify).RelPermalink }}" /></noscript>
-	{{end}}
-
-	<!-- FontAwesome CSS -->
-	{{ range .Site.Params.asset.fontawesome_css -}}
-		<link rel="stylesheet" href="{{ . | absURL }}">
-	{{- end }}
-
     {{ with .Site.Params.gtag }}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ .id }}"></script>
     <script>
@@ -60,4 +34,43 @@
     }
     </script>
     {{ end }}
+
+	{{ if .Site.Params.favicon }}
+	{{ partial "favicon" }}
+	{{ end }}
+
+	<!-- CSS -->
+    {{ if false}}
+	{{ if hugo.IsServer }}
+	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" false) }}
+	<link rel="stylesheet" href="{{ ($style).RelPermalink }}">
+	{{ else }}
+	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "enableSourceMap" false) }}
+	<link rel="stylesheet" href="{{ ($style | minify | fingerprint "md5").RelPermalink }}">
+	{{ end }}
+    {{else}}
+    {{ with resources.Get "css/used.css" | minify }}
+        <style>{{ .Content | safeCSS }}</style>
+    {{ end }}
+    {{end}}
+
+	{{ if hugo.IsServer }}
+	{{ $noscript := resources.Get "sass/noscript.scss" | resources.ExecuteAsTemplate "noscript.scss" . | toCSS (dict "targetPath" "css/noscript.css" "enableSourceMap" false) }}
+	<noscript><link rel="stylesheet" href="{{ ($noscript).RelPermalink }}" /></noscript>
+	{{ else }}
+	{{ $noscript := resources.Get "sass/noscript.scss" | resources.ExecuteAsTemplate "noscript.scss" . | toCSS (dict "targetPath" "css/noscript.css" "enableSourceMap" false) }}
+	<noscript><link rel="stylesheet" href="{{ ($noscript | minify | fingerprint "md5").RelPermalink }}" /></noscript>
+	{{end}}
+
+	<!-- FontAwesome CSS -->
+	{{/* range .Site.Params.asset.fontawesome_css -}}
+		<link rel="stylesheet" href="{{ . | absURL }}">
+	{{- end */}}
+
+    <link rel="preload" fetchpriority="high" as="image" href="images/banner0-1.webp" type="image/webp" >
+    <link rel="preload" as="image" href="images/banner1.webp" type="image/webp" >
+    <link rel="preload" as="image" href="images/banner2.webp" type="image/webp" >
+    <link rel="preload" as="image" href="images/banner3-1.webp" type="image/webp" >
+    <link rel="preload" as="image" href="images/banner4.webp" type="image/webp" >
+    <link rel="preload" as="image" href="images/banner5.webp" type="image/webp" >
 </head>
