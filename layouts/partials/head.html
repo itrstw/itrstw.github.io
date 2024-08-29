@@ -44,9 +44,15 @@
 	{{ if hugo.IsServer }}
 	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" false) }}
 	<link rel="stylesheet" href="{{ ($style).RelPermalink }}">
+    {{/* with $style | minify -}}
+        <style>{{ .Content | safeCSS }}</style>
+    {{- end */}}
 	{{ else }}
 	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "enableSourceMap" false) }}
 	<link rel="stylesheet" href="{{ ($style | minify | fingerprint "md5").RelPermalink }}">
+    {{/* with $style | minify -}}
+        <style>{{ .Content | safeCSS }}</style>
+    {{- end */}}
 	{{ end }}
 
     {{ if true }}
