@@ -9,6 +9,11 @@
     <meta property="og:type" content="website"/>
     <meta property="og:description" content="{{ .Site.Params.description }}"/>
     <meta property="og:title" content="{{ .Site.Title }}"/>
+
+	{{ if .Site.Params.favicon }}
+	{{ partial "favicon" }}
+	{{ end }}
+
     {{ with .Site.Params.gtag }}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ .id }}"></script>
     <script>
@@ -35,12 +40,8 @@
     </script>
     {{ end }}
 
-	{{ if .Site.Params.favicon }}
-	{{ partial "favicon" }}
-	{{ end }}
-
 	<!-- CSS -->
-    {{ if false}}
+    {{ if false }}
 	{{ if hugo.IsServer }}
 	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" false) }}
 	<link rel="stylesheet" href="{{ ($style).RelPermalink }}">
