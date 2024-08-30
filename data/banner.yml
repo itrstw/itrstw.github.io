@@ -13,9 +13,11 @@ content : |
   我們熱愛動手實驗，享受親手創作的過程，並力於將創意變為現實。在工研社，你會遇到一群同樣熱愛技術、充滿創新精神的夥伴，一起學習新知識、挑戰新技術，打造屬於自己的超酷作品！
 
 button:
-  label_next : "了解更多"
-  link_next : "#first"
-  label_ig : "活動IG"
-  link_ig : "https://www.instagram.com/hsnu_itrs"
+  #label_next : "了解更多"
+  #link_next : "#ig"
+  #label_ig : "活動IG"
+  #link_ig : "https://www.instagram.com/hsnu_itrs"
+  label_ig : "點擊開啟工研社之旅！✨"
+  link_ig : "#ig"
 image : "images/banner0-1.webp"
 
