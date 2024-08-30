@@ -6,8 +6,22 @@
 	This Hugo theme is licensed under the Creative Commons Attribution 3.0 License.
 -->
 <html lang="zh-TW">
-	
+
+{{ $jQuery := resources.Get "js/jquery.min.js" }}
+{{ $scrollex := resources.Get "js/jquery.scrollex.min.js" }}
+{{ $scrolly := resources.Get "js/jquery.scrolly.min.js" }}
+{{ $browser := resources.Get "js/browser.min.js" }}
+{{ $breakpoints := resources.Get "js/breakpoints.min.js" }}
+{{ $util := resources.Get "js/util.js" }}
+{{ $main := resources.Get "js/main.js" }}
+{{ $demo := resources.Get "js/demo.js" }}
+
+{{ $js := slice $jQuery $scrollex $scrolly $browser $breakpoints $util $main $demo | resources.Concat "js/bundle.js" | minify | fingerprint "md5"}}
+
+    <head>
 	{{ partial "head" . }}
+    <link rel="prelaod" href='{{ $js.RelPermalink }}' as="script" />
+    </head>
 
 	<body class="is-preload">
 
@@ -16,8 +30,9 @@
             {{- block "main" . }}{{- end }}
 		<!-- Wrapper -->
 		</div>
-		
+
 		{{ template "_internal/google_analytics.html" . }}
+        <script src='{{ $js.RelPermalink }}'></script>
 		{{ partial "scripts" . }}
 
 	</body>

@@ -1,17 +1,3 @@
-
-{{ $jQuery := resources.Get "js/jquery.min.js" }}
-{{ $scrollex := resources.Get "js/jquery.scrollex.min.js" }}
-{{ $scrolly := resources.Get "js/jquery.scrolly.min.js" }}
-{{ $browser := resources.Get "js/browser.min.js" }}
-{{ $breakpoints := resources.Get "js/breakpoints.min.js" }}
-{{ $util := resources.Get "js/util.js" }}
-{{ $main := resources.Get "js/main.js" }}
-{{ $demo := resources.Get "js/demo.js" }}
-
-{{ $js := slice $jQuery $scrollex $scrolly $browser $breakpoints $util $main $demo | resources.Concat "js/bundle.js" | minify | fingerprint "md5"}}
-<!-- Scripts -->
-<script src='{{ $js.RelPermalink }}'></script>
-
 <script>
 /* https://medium.com/front-end-weekly/how-to-optimize-image-loading-on-your-website-855020fb41ae */
 (() => {

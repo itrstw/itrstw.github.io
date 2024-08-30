@@ -61,10 +61,9 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-          # Compress
-          find public -type f -regex '.*\.\(css\|html\|js\|txt\|xml\)$' -exec gzip -f -k {} \;
-          find public -type f -regex '.*\.\(css\|html\|js\|txt\|xml\)$' -exec brotli -f -k {} \;
+            --baseURL "${{ steps.pages.outputs.base_url }}/" && \
+          find public -type f -regex '.*\.\(css\|html\|js\|txt\|xml\)$' -exec gzip -f -k '{}' ';' && \
+          find public -type f -regex '.*\.\(css\|html\|js\|txt\|xml\)$' -exec brotli -f -k '{}' ';'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
