@@ -8,6 +8,13 @@
         </ul>{{ end }}
     </div>
     {{ with .image }}<div class="image">
-        <img src="{{ . }}" alt="" />
+    <img class="asyncImage" src="{{ .low }}" data-src="{{ .orig }}" alt="" />
+    {{/*
+         <!--picture>
+            <source media="(max-width: 799px)" srcset="{{ .low }}" />
+            <source media="(min-width: 800px)" srcset="{{ .orig }}" />
+            <img src="{{ .orig }}" alt="" />
+        </picture-->
+    */}}
     </div>{{ end }}
 </section>

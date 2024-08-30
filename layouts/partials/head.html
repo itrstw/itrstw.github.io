@@ -37,23 +37,49 @@
       });
       return false;
     }
-    </script>
-    {{ end }}
+    </script>{{ end }}
+    <!--link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      crossorigin
+    /-->
+    <!-- https://web.dev/articles/codelab-preload-web-fonts -->
+    <link rel="preload" href="/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu3cOWxw.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2" as="font" type="font/woff2" crossorigin />
+
+    <link rel="preload" as="image" href="images/banner0-1.webp" type="image/webp" />
+    <link rel="preload" as="image" href="images/banner1-low.webp" type="image/webp" />
+    <link rel="preload" as="image" href="images/banner2-low.webp" type="image/webp" />
+    <link rel="preload" as="image" href="images/banner3-1-low.webp" type="image/webp" />
+    <link rel="preload" as="image" href="images/banner4-low.webp" type="image/webp" />
+    <link rel="preload" as="image" href="images/banner5-low.webp" type="image/webp" />
+
+    <link rel="preload" as="image" href="images/banner1.webp" type="image/webp" />
+    <link rel="preload" as="image" href="images/banner2.webp" type="image/webp" />
+    <link rel="preload" as="image" href="images/banner3-1.webp" type="image/webp" />
+    <link rel="preload" as="image" href="images/banner4.webp" type="image/webp" />
+    <link rel="preload" as="image" href="images/banner5.webp" type="image/webp" />
+
 
 	<!-- CSS -->
-	{{ if hugo.IsServer }}
-	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" false) }}
-	<link rel="stylesheet" href="{{ ($style).RelPermalink }}">
+	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" false) | fingerprint "md5" }}
+    <link rel="stylesheet" href="{{ ($style).RelPermalink }}" />
     {{/* with $style | minify -}}
         <style>{{ .Content | safeCSS }}</style>
     {{- end */}}
-	{{ else }}
-	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "enableSourceMap" false) }}
-	<link rel="stylesheet" href="{{ ($style | minify | fingerprint "md5").RelPermalink }}">
-    {{/* with $style | minify -}}
-        <style>{{ .Content | safeCSS }}</style>
-    {{- end */}}
-	{{ end }}
+
+
+	{{ $noscript := resources.Get "sass/noscript.scss" | resources.ExecuteAsTemplate "noscript.scss" . | toCSS (dict "targetPath" "css/noscript.css" "enableSourceMap" false "outputStyle" "compressed") | fingerprint "md5" }}
+	<noscript><link rel="stylesheet" href="{{ ($noscript).RelPermalink }}" /></noscript>
+
+	<!-- FontAwesome CSS -->
+	{{/* range .Site.Params.asset.fontawesome_css -}}
+		<link rel="stylesheet" href="{{ . | absURL }}">
+	{{- end */}}
 
     {{ if true }}
     {{ with resources.Get "css/used.css" | minify }}
@@ -61,23 +87,6 @@
     {{ end }}
     {{end}}
 
-	{{ if hugo.IsServer }}
-	{{ $noscript := resources.Get "sass/noscript.scss" | resources.ExecuteAsTemplate "noscript.scss" . | toCSS (dict "targetPath" "css/noscript.css" "enableSourceMap" false) }}
-	<noscript><link rel="stylesheet" href="{{ ($noscript).RelPermalink }}" /></noscript>
-	{{ else }}
-	{{ $noscript := resources.Get "sass/noscript.scss" | resources.ExecuteAsTemplate "noscript.scss" . | toCSS (dict "targetPath" "css/noscript.css" "enableSourceMap" false) }}
-	<noscript><link rel="stylesheet" href="{{ ($noscript | minify | fingerprint "md5").RelPermalink }}" /></noscript>
-	{{end}}
+    <link rel="preload" as="script" href="./js/bundle.min.js" />
 
-	<!-- FontAwesome CSS -->
-	{{/* range .Site.Params.asset.fontawesome_css -}}
-		<link rel="stylesheet" href="{{ . | absURL }}">
-	{{- end */}}
-
-    <link rel="preload" fetchpriority="high" as="image" href="images/banner0-1.webp" type="image/webp" >
-    <link rel="preload" as="image" href="images/banner1.webp" type="image/webp" >
-    <link rel="preload" as="image" href="images/banner2.webp" type="image/webp" >
-    <link rel="preload" as="image" href="images/banner3-1.webp" type="image/webp" >
-    <link rel="preload" as="image" href="images/banner4.webp" type="image/webp" >
-    <link rel="preload" as="image" href="images/banner5.webp" type="image/webp" >
 </head>

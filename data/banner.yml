@@ -2,11 +2,11 @@
 style: "style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right"
 title : "ITRS - 附中工研"
 subtitle: |
-    <a onclick="return gtag_report_conversion('https:\/\/www.instagram.com\/hsnu_itrs');" target="_blank" href="https://www.instagram.com/hsnu_itrs" class="icon brands style2 fa-instagram"><span class="label">instagram</span></a>
-    <a onclick="return gtag_report_conversion('https:\/\/discord.com/invite/fwSwZtFgzH');" target="_blank" href="https://discord.com/invite/fwSwZtFgzH" class="icon brands style2 fa-discord"><span class="label">Discord</span></a>
-    <a target="_blank" href="https://www.facebook.com/HSNU.ITRS.infinite" class="icon brands style2 fa-facebook"><span class="label">Facebook</span></a>
-    <a target="_blank" href="https://github.com/itrstw/" class="icon brands style2 fa-github"><span class="label">Github</span></a>
-    <a target="_blank" href="https://linktr.ee/hsnu_itrs" class="icon style2 fa-tree"><span class="label">Linktree</span></a>
+    <a onclick="return gtag_report_conversion('https:\/\/www.instagram.com\/hsnu_itrs');" target="_blank" href="https://www.instagram.com/hsnu_itrs" class="icon brands style2 fa-instagram" aria-label="Instagram"><span class="label">Instagram</span></a>
+    <a onclick="return gtag_report_conversion('https:\/\/discord.com/invite/fwSwZtFgzH');" target="_blank" href="https://discord.com/invite/fwSwZtFgzH" class="icon brands style2 fa-discord" aria-label="Discord"><span class="label">Discord</span></a>
+    <a target="_blank" href="https://www.facebook.com/HSNU.ITRS.infinite" class="icon brands style2 fa-facebook" aria-label="Facebook"><span class="label">Facebook</span></a>
+    <a target="_blank" href="https://github.com/itrstw/" class="icon brands style2 fa-github" aria-label="Github"><span class="label">Github</span></a>
+    <a target="_blank" href="https://linktr.ee/hsnu_itrs" class="icon style2 fa-tree" aria-label="Linktree"><span class="label">Linktree</span></a>
 content : |
   歡迎來到 師大附中 工業技術研究社！<br/><br/>
   工研社成立於1977年，是台灣最早的創客空間之一。在這裡，我們探索工業技術的無限可能，無論是電機資訊、3D列印與建模，還是化學工程，都是我們的創作樂園。<br/><br/>

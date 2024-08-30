@@ -18,5 +18,7 @@ instagram:
 discord:
   "link": "https://discord.com/invite/fwSwZtFgzH"
   label: "加入工研Discord"
-image : "images/banner1.webp"
+image :
+  orig: "images/banner1.webp"
+  low: "images/banner1-low.webp"
 
