@@ -15,16 +15,14 @@
         </ul>
     </div>
     {{ with .image }}<div class="image">
+        {{ if false }}
         <img class="asyncImage" src="{{ .low }}" data-src="{{ .orig }}" alt="" />
-        {{/*
-        <div style="background-image: url({{.orig}}),url({{ .low }})">
-            <img src="{{ .low }}" alt="" width="0" height="0" style="display: none !important;" />
-        </div>
+        {{ else }}
         <picture>
             <source media="(max-width: 799px)" srcset="{{ .low }}" />
             <source media="(min-width: 800px)" srcset="{{ .orig }}" />
             <img src="{{ .low }}" alt="" />
         </picture>
-        */}}
+        {{ end }}
     </div>{{ end }}
 </section>
