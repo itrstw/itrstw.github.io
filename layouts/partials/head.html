@@ -8,23 +8,28 @@
     <meta property="og:type" content="website"/>
     <meta property="og:description" content="{{ .Site.Params.description }}"/>
     <meta property="og:title" content="{{ .Site.Title }}"/>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6FH5SLR');</script>
+    <!-- End Google Tag Manager -->
 
 	{{ if .Site.Params.favicon }}
 	{{ partial "favicon" }}
 	{{ end }}
 
     {{ with .Site.Params.gtag }}
+    {{ end }}
     {{/*
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ .id }}"></script>
-    */}}
     <script>
-    {{/*
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', {{ .id }});
-    */}}
 
     function gtag_report_conversion(url) {
       var callback = function () {
@@ -32,17 +37,15 @@
           window.open(url, '_blank');
         }
       };
-    {{/*
       gtag('event', 'conversion', {
         'send_to': '{{ .id }}/{{ .label }}',
         'value': 1.0,
         'currency': 'TWD',
         'event_callback': callback
       });
-    */}}
       return false;
     }
-    </script>{{ end }}
+    </script>*/}}
     <!-- https://web.dev/articles/codelab-preload-web-fonts -->
     <link rel="preload" href="/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin />
