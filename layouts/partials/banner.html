@@ -5,16 +5,12 @@
         {{ with .subtitle }}<p class="major">{{ . | safeHTML }}</p>{{ end }}
         {{ with .content }}<p>{{ . | safeHTML }}</p>{{ end }}
         {{ with .button }}<ul class="actions stacked">
+            <li><a href="{{ .link_ig }}" class="button primary large wide smooth-scroll-middle">{{ .label_ig }}</a></li>
             {{/*
-            <li>
-                <a href="{{ .link_next }}" class="button primary large wide smooth-scroll-middle">{{ .label_next }}</a>&nbsp;&nbsp;
-                <a onclick="return gtag_report_conversion('{{ .link_ig }}');" target="_blank" href="{{ .link_ig }}" class="button primary large wide smooth-scroll-middle">
-                    <b class="icon brands fa-instagram fa-inverse"><span class="label">{{ .label_ig }}</span> {{ .label_ig }}</b>
-                </a></li> */}}
-            <li>
-            <a href="{{ .link_ig }}" class="button primary large wide smooth-scroll-middle">
+            <li><a href="{{ .link_ig }}" class="button primary large wide smooth-scroll-middle">
                 <b class="icon brands fa-instagram fa-inverse"><span class="label">{{ .label_ig }}</span> {{ .label_ig }}</b>
             </a></li>
+             */}}
         </ul>{{ end }}
     </div>
     {{ with .image }}<div class="image">
