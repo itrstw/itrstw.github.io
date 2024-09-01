@@ -8,6 +8,7 @@
     <meta property="og:type" content="website"/>
     <meta property="og:description" content="{{ .Site.Params.description }}"/>
     <meta property="og:title" content="{{ .Site.Title }}"/>
+    {{ if false }}
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -15,14 +16,8 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-W6FH5SLR');</script>
     <!-- End Google Tag Manager -->
-
-	{{ if .Site.Params.favicon }}
-	{{ partial "favicon" }}
-	{{ end }}
-
+    {{ else }}
     {{ with .Site.Params.gtag }}
-    {{ end }}
-    {{/*
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ .id }}"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -45,7 +40,14 @@
       });
       return false;
     }
-    </script>*/}}
+    </script>
+    {{ end }}
+    {{ end }}
+
+	{{ if .Site.Params.favicon }}
+	{{ partial "favicon" }}
+	{{ end }}
+
     <!-- https://web.dev/articles/codelab-preload-web-fonts -->
     <link rel="preload" href="/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin />
