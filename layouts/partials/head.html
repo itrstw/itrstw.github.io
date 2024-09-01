@@ -25,24 +25,10 @@
     gtag('js', new Date());
 
     gtag('config', {{ .id }});
-
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.open(url, '_blank');
-        }
-      };
-      gtag('event', 'conversion', {
-        'send_to': '{{ .id }}/{{ .label }}',
-        'value': 1.0,
-        'currency': 'TWD',
-        'event_callback': callback
-      });
-      return false;
-    }
     </script>
     {{ end }}
     {{ end }}
+
 
 	{{ if .Site.Params.favicon }}
 	{{ partial "favicon" }}
@@ -58,6 +44,10 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i&display=swap" rel="stylesheet" type="text/css" />
     </noscript>
 
+    <link rel="preconnect" href="https://www.instagram.com"/>
+    <link rel="preconnect" href="https://static.cdninstagram.com"/>
+    <link rel="preconnect" href="https://scontent.cdninstagram.com"/>
+
     <link rel="preload" as="image" href="images/banner0-1.webp" type="image/webp" />
     <link rel="preload" as="image" href="images/banner1-low.webp" type="image/webp" />
     <link rel="preload" as="image" href="images/banner2-low.webp" type="image/webp" />
@@ -70,16 +60,20 @@
     <link rel="preload" as="image" href="images/banner3-1.webp" type="image/webp" media="(min-width: 800px)" />
     <link rel="preload" as="image" href="images/banner4.webp" type="image/webp" media="(min-width: 800px)" />
     <link rel="preload" as="image" href="images/banner5.webp" type="image/webp" media="(min-width: 800px)" />
-    <!--link rel="prelaod" href="//www.instagram.com/embed.js" as="script" crossorigin /-->
     <link rel="prelaod" href="//www.instagram.com/embed.js?is_from_rle" as="script" crossorigin />
-
 
 	<!-- CSS -->
 	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" false) | fingerprint "md5" }}
-    <link rel="stylesheet" href="{{ ($style).RelPermalink }}" />
+    {{/* with resources.Get "css/critical.css" | minify }}
+        <link rel="stylesheet" href="css/critical.css" />
+        <style>{{ .Content | safeCSS }}</style>
+    {{end */}}
+    {{ if true }}
+    <link rel="preload" as="style" href="{{ ($style).RelPermalink }}"  onload="this.onload=null;this.rel='stylesheet'" />
     {{/* with $style | minify -}}
         <style>{{ .Content | safeCSS }}</style>
     {{- end */}}
+    {{ end }}
 
 
 	{{ $noscript := resources.Get "sass/noscript.scss" | resources.ExecuteAsTemplate "noscript.scss" . | toCSS (dict "targetPath" "css/noscript.css" "enableSourceMap" false "outputStyle" "compressed") | fingerprint "md5" }}

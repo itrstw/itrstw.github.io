@@ -38,7 +38,8 @@ disableKinds = ["taxonomy", "section"]
 
 [Params.gtag]
   id = "AW-16678989424"
-  label = "XWzhCMrYgc4ZEPDclJE-"
+  view = "HnBfCPf7nswZEPDclJE-"
+  label = "ZYyxCJi9ls8ZEPDclJE-"
 # https://www.nimbata.com/guide/how-to-track-form-conversions-in-google-ads/
 # form label 47V0CNjU6s4ZEPDclJE-
 

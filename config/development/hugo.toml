@@ -38,7 +38,8 @@ disableKinds = ["taxonomy", "section"]
 
 [Params.gtag]
   id = "AW-16678989424"
-  label = "XWzhCMrYgc4ZEPDclJE-"
+  view = "HnBfCPf7nswZEPDclJE-"
+  label = "ZYyxCJi9ls8ZEPDclJE-"
 
 [Params.social]
   instagram = "https://www.instagram.com/hsnu_itrs/"
