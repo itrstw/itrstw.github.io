@@ -17,7 +17,7 @@ button:
   #link_next : "#ig"
   #label_ig : "活動IG"
   #link_ig : "https://www.instagram.com/hsnu_itrs"
-  label_ig : "高一新生專屬！填表領小禮物！🎉"
+  label_ig : "高一新生專屬！填表領小禮物！🎉 " 
   link_ig : "https://forms.gle/sbW9pE8RNaTq66R77"
 image :
   orig: "images/banner0-1.webp"
