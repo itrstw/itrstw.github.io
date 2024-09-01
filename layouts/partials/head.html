@@ -25,6 +25,12 @@
     gtag('js', new Date());
 
     gtag('config', {{ .id }});
+    gtag('event', 'conversion', {'send_to': '{{.id}}/{{.view}}', 'value': 1.0, 'currency': 'TWD' });
+    function gtag_report_conversion(url) {
+      var callback = function () { if (typeof(url) != 'undefined') { window.open(url, '_blank'); }};
+      gtag('event', 'conversion', {'send_to': '{{ .id }}/{{ .label }}', 'value': 30.0, 'currency': 'TWD', 'event_callback': callback});
+      return false;
+    }
     </script>
     {{ end }}
     {{ end }}
@@ -69,7 +75,7 @@
         <style>{{ .Content | safeCSS }}</style>
     {{end */}}
     {{ if true }}
-    <link rel="preload" as="style" href="{{ ($style).RelPermalink }}"  onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="stylesheet" href="{{ ($style).RelPermalink }}" />
     {{/* with $style | minify -}}
         <style>{{ .Content | safeCSS }}</style>
     {{- end */}}

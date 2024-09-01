@@ -20,7 +20,8 @@
 
     <head>
 	{{ partial "head" . }}
-    <link rel="prelaod" href='{{ $js.RelPermalink }}' as="script" />
+    <!--link rel="prelaod" href='{{ $js.RelPermalink }}' as="script" /-->
+    <script async src='{{ $js.RelPermalink }}'></script>
     </head>
 
 	<body class="is-preload">
@@ -38,18 +39,6 @@
 		</div>
 
 		{{/* template "_internal/google_analytics.html" . */}}
-        {{ with .Site.Params.gtag }}
-        <script defer>
-        gtag('event', 'conversion', {'send_to': '{{.id}}/{{.view}}', 'value': 1.0, 'currency': 'TWD' });
-        function gtag_report_conversion(url) {
-          var callback = function () { if (typeof(url) != 'undefined') { window.open(url, '_blank'); }};
-          gtag('event', 'conversion', {'send_to': '{{ .id }}/{{ .label }}', 'value': 30.0, 'currency': 'TWD', 'event_callback': callback});
-          return false;
-        }
-        </script>
-        {{ end }}
-
-        <script defer src='{{ $js.RelPermalink }}'></script>
 		{{ partial "scripts" . }}
 
 	</body>
