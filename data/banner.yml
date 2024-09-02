@@ -1,5 +1,5 @@
 ####################### Banner #########################
-style: "style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right"
+style: "style1 orient-left content-align-left image-position-right fullscreen onload-content-fade-right"
 title : "ITRS - 附中工研"
 subtitle: |
     <a onclick="return gtag_report_conversion('https:\/\/www.instagram.com\/hsnu_itrs');" target="_blank" href="https://www.instagram.com/hsnu_itrs" class="icon brands style2 fa-instagram" aria-label="Instagram"><span class="label">Instagram</span></a>
