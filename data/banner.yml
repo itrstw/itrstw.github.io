@@ -8,9 +8,9 @@ subtitle: |
     <a target="_blank" href="https://github.com/itrstw/" class="icon brands style2 fa-github" aria-label="Github"><span class="label">Github</span></a>
     <a target="_blank" href="https://linktr.ee/hsnu_itrs" class="icon style2 fa-tree" aria-label="Linktree"><span class="label">Linktree</span></a>
 content : |
-  歡迎來到 師大附中 工業技術研究社！<br/><br/>
-  工研社成立於1977年，是台灣最早的創客空間之一。在這裡，我們探索工業技術的無限可能，無論是電機資訊、3D列印與建模，還是化學工程，都是我們的創作樂園。<br/><br/>
-  我們熱愛動手實驗，享受親手創作的過程，並力於將創意變為現實。在工研社，你會遇到一群同樣熱愛技術、充滿創新精神的夥伴，一起學習新知識、挑戰新技術，打造屬於自己的超酷作品！
+  歡迎來到 師大附中 <b>工業技術研究社</b>！<br/><br/>
+  <b>工研社是台灣最早的創客空間之一</b>，成立於1977年。在這裡，我們探索工業技術的無限可能，無論是電機資訊、3D列印與建模，還是化學工程，都是我們的創作樂園。<br/><br/>
+  我們熱愛動手實驗，享受親手創作的過程，並力於將創意變為現實。在工研社，你會遇到一群同樣熱愛技術、充滿創新精神的夥伴，<b>一起學習新知識、挑戰新技術，打造屬於自己的超酷作品</b>！
 
 button:
   #label_next : "了解更多"

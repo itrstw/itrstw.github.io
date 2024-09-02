@@ -3,7 +3,7 @@ style: "style1 orient-right content-align-left image-position-center onscroll-im
 id: "first"
 title : "資電組 (資訊+電機) ⚡"
 content: |
-  資電組涵蓋資訊與電子電機領域，分為上學期的基礎教學和下學期的專題製作。我們將從零開始教授以下超酷的主題：<br/>
+  資電組專攻AI/ML、電腦科學和機器人等熱門領域，並由<b>國際級師資親自指導</b>！從零起步，學習以下超酷主題，打造你的專題作品！預定課程：
   <ol>
   <li>五行程式實作AI語意分析 by Colab 🤟 </li>
   <li>程式與線性代數淺嚐 by Turtle 🐢 </li>
@@ -13,6 +13,12 @@ content: |
   <li>資料結構與AI API：呼叫 LLAMA 🦙 </li>
   <li>深度學習淺嚐：萬能近似 👽 </li>
   </ol>
+  <br />
+   <picture>
+      <source media="(max-width: 799px)" srcset="images/nao-low.webp" />
+      <source media="(min-width: 800px)" srcset="images/nao.webp" />
+      <img loading="lazy" src="nao-low.webp" alt="" />
+  </picture>
 image:
   orig: "images/banner3-1.webp"
   low: "images/banner3-1-low.webp"

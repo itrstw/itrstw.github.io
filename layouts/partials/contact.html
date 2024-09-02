@@ -9,8 +9,11 @@
                 <b class="icon brands fa-instagram fa-inverse"><span class="label">Instagram</span> {{.label}} </b></a><li>
             {{ end }}
             {{ with .discord }}
+            <li><a onclick="return gtag_report_conversion('{{.link}}');" target="_blank" href="{{ .link}}" class="button primary large wide smooth-scroll-middle">{{ .label }}</a></li>
+            {{/*
             <li><a onclick="return gtag_report_conversion('{{.link}}');" target="_blank" href="{{.link}}" class="button primary large wide smooth-scroll-middle">
                 <b class="icon brands fa-discord fa-inverse"><span class="label">Discord</span> {{.label}} </b></a><li>
+            */}}
             {{ end}}
         </ul>
     </div>
