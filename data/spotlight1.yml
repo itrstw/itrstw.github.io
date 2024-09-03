@@ -17,7 +17,7 @@ content: |
    <picture>
       <source media="(max-width: 799px)" srcset="images/nao-low.webp" />
       <source media="(min-width: 800px)" srcset="images/nao.webp" />
-      <img loading="lazy" src="nao-low.webp" alt="" />
+      <img loading="lazy" src="nao-low.webp" width="320px" height="320px" alt="" />
   </picture>
 image:
   orig: "images/banner3-1.webp"
