@@ -1,6 +1,5 @@
 ####################### Spotlight #########################
 style: "style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
-id: "first"
 title : "工研小知識 🎉"
 content: |
   <ul>
