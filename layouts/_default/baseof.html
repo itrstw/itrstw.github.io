@@ -21,7 +21,7 @@
     <head>
 	{{ partial "head" . }}
     <!--link rel="prelaod" href='{{ $js.RelPermalink }}' as="script" /-->
-        <script async src='{{ $js.RelPermalink }}'></script>
+        <script defer src='{{ $js.RelPermalink }}'></script>
     </head>
 
 	<body class="is-preload">

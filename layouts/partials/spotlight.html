@@ -14,7 +14,7 @@
          <picture>
             <source media="(max-width: 799px)" srcset="{{ .low }}" />
             <source media="(min-width: 800px)" srcset="{{ .orig }}" />
-            <img loading="lazy" src="{{ .low }}" alt="" />
+            <img loading="lazy" decode="async" src="{{ .low }}" alt="" />
         </picture>
     {{ end }}
     </div>{{ end }}

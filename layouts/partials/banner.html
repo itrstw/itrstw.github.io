@@ -19,7 +19,7 @@
         <picture>
           <source media="(max-width: 799px)" srcset="{{ .low }}" />
           <source media="(min-width: 800px)" srcset="{{ .orig }}" />
-          <img src="{{ .low }}" width="745" height="720" alt="" />
+          <img src="{{ .low }}" width="745" height="720" alt="" decode="async" />
         </picture>
     </div>{{end}}
 </section>
