@@ -3,7 +3,7 @@ style: "style1 orient-right content-align-left image-position-right fullscreen o
 title : "如何聯絡 📞"
 content : |
   加入工研社後，我們主要在 
-  <a onclick="return gtag_report_conversion('https:\/\/discord.com/invite/fwSwZtFgzH');" target="_blank" href="https://discord.com/invite/fwSwZtFgzH" class="icon brands fa-discord"><span class="label">Discord</span> <b><u>Discord</u></b></a> 
+  <a target="_blank" href="https://discord.com/invite/fwSwZtFgzH" class="icon brands fa-discord"><span class="label">Discord</span> <b><u>Discord</u></b></a> 
   上進行日常活動。
   想看到更多我們的精彩成果和創意作品？別忘了追蹤我們的 
   <a target="_blank" onclick="return gtag_report_conversion('https:\/\/www.instagram.com\/hsnu_itrs');" href="https://www.instagram.com/hsnu_itrs" class="icon brands fa-instagram"><span class="label">Instagram</span> <b><u>Instagram</u></b></a> 
