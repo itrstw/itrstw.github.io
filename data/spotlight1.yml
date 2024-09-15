@@ -13,12 +13,12 @@ content: |
   <li>資料結構與AI API：呼叫 LLAMA 🦙 </li>
   <li>深度學習淺嚐：萬能近似 👽 </li>
   </ol>
-  <br />
+  <!--br />
    <picture>
       <source media="(max-width: 799px)" srcset="images/nao-low.webp" />
       <source media="(min-width: 800px)" srcset="images/nao.webp" />
       <img loading="lazy" src="nao-low.webp" width="320px" height="320px" alt="" />
-  </picture>
+  </picture-->
 image:
-  orig: "images/banner3-1.webp"
-  low: "images/banner3-1-low.webp"
+  orig: "images/banner6.webp"
+  low: "images/banner6-low.webp"
